@@ -24,3 +24,4 @@ The designs were created to the following widths:
 
 - Family: [Work Sans](https://fonts.google.com/specimen/Work+Sans)
 - Weights: 400, 600, 700
+

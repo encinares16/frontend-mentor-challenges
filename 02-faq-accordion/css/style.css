@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Work+Sans:ital,wght@0,600;0,700;1,400&display=swap');
+
+:root {
+  --base-color-white: hsl(0, 0%, 100%);
+  --base-color-lightpink: hsl(275, 100%, 97%);
+  --base-color-purple:hsl(292, 16%, 49%);
+  --base-color-darkpurple: hsl(292, 42%, 14%) ;
+  --hover-color-text: #B127E6;
+  --base-box-shadow: 0 18px 48px 18px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* .attribution { font-size: 11px; text-align: center; } */
+/* .attribution a { color: hsl(228, 45%, 44%); }  */
+
+
+body, .container, .faqs {
+  display: flex;
+}
+
+body {
+  justify-content: center; 
+  align-items: center;
+  height: 100vh;
+  background-color: var(--base-color-white)
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  content: url(/assets/images/background-pattern-desktop.svg);
+}
+
+.container {
+  flex-direction: column;
+  width: 600px;
+  min-height: 400px;
+  background-color: var(--base-color-white);
+  position: absolute;
+  border-radius: 16px;
+  box-shadow: var(--base-box-shadow);
+  padding: 48px 36px;
+  margin-top: 168px;
+}
+
+.faqs {
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 60px;
+  margin-left: 30px;
+}
+
+.faq-accordion {
+  cursor: pointer;
+  padding: 30px 0px;
+  width: 100%;
+  border: none;
+  background-color: var(--base-color-white);
+  border-top: 1px solid #EFEFEF;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.faq-accordion:nth-child(2) {
+  border: none;
+}
+
+.faq-accordion:hover {
+  color: var(--hover-color-text);
+}
+
+.faq-accordion:after {
+  content: url(/assets/images/icon-plus.svg);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: url(/assets/images/icon-minus.svg);
+}
+
+.faq__content {
+  background-color: var(--base-color-white);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+} 
+
+.faq__content > p {
+  color: var(--base-color-purple);
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  width: 45ch;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 672px) {
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .image {
+    content: url(/assets/images/background-pattern-mobile.svg);
+  }
+
+  body {
+    padding: 0 20px;
+  }
+  .container  {
+    width: 75%;
+    margin: 0 30px;
+    max-height: 200%;
+    /* background-size: 100% 100%; */
+  }
+  .faq__content > p {
+    width: 100%;
+    font-size: 16px;
+  }
+}
