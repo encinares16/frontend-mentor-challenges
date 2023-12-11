@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --base-color-cyan: hsl(185, 75%, 39%);
+  --desaturated-blue:  hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100vh;
+  background-color: var(--base-color-cyan) ;
+  background-image: url('/images/bg-pattern-top.svg'), url('/images/bg-pattern-bottom.svg');
+  background-position: -250px -410px, 700px 410px;
+  background-repeat: no-repeat;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 3rem 3rem 1.4rem 1.4rem;
+  height: 37.5rem;
+  width: 35rem;
+  box-shadow: 0 32px 64px 0 rgba(0, 0, 0, 0.225);
+}
+
+.card-cover > img {
+  border-radius: 1.4rem 1.4rem 0 0;
+}
+
+.card-profile {
+  position: relative;
+  top: -50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background: white;
+  padding: 4.4px;
+}
+
+.card-profile > img {
+  position: relative;
+  top: 1px;
+  border-radius: 50px;
+  height: 90px;
+}
+
+.card-info {
+  text-align: center;
+  position: relative;
+  top: -30px;
+  width: 100%;
+}
+
+h2 {
+  color: var(--desaturated-blue);
+}
+
+p {
+  color: var(--grayish-blue);
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+p, .profile-age {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-age {
+  font-size: 18px;
+}
+
+.card-engagements {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 3px solid rgb(241, 241, 241);
+  margin-top: 22px;
+  padding: 16px 14px 0 0;
+}
+
+.engagement > h2 {
+  font-size: 20px;
+}
+
+.engagement > p {
+  letter-spacing: 1px;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    height: 100vh;
+    background-color: var(--base-color-cyan) ;
+    background-image: url('/images/bg-pattern-top.svg'), url('/images/bg-pattern-bottom.svg');
+    background-position: -680px -620px, 50px 450px;
+    background-repeat: no-repeat;
+  }
+}
