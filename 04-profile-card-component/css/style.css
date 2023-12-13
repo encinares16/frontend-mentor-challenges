@@ -27,8 +27,8 @@ body {
   height: 100vh;
   background-color: var(--base-color-cyan) ;
   background-image: url('/images/bg-pattern-top.svg'), url('/images/bg-pattern-bottom.svg');
-  background-position: -250px -410px, 700px 410px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
 }
 
 .card {
